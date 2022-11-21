@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.app{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.time-select,.sound-picker,.player-container{
+    height: 80%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.time-select > button{
+    padding: 10px 20px;
+    border: 2px solid white;
+    background-color: #ffffff00;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    transition: .3s ease;
+    cursor: pointer;
+}
+.time-select > button:hover{
+    background-color: white;
+    color: black;
+}
+
+.sound-picker button:first-child{
+    border-radius: 50%;
+    background-color: #20abd8;
+    border: none;
+    width: 120px;
+    cursor: pointer;
+    height: 120px;
+}
+.sound-picker button:last-child{
+    border-radius: 50%;
+    border: none;
+    width: 120px;
+    cursor: pointer;
+    height: 120px;
+    background-color: #fe560f;
+}
+.sound-picker button img{
+    height: 50%;
+}
+.player-container{
+    position: relative;
+}
+.player-container svg{
+    position: absolute;
+    top: 50%;
+    transform:translateY(-50%)  rotate(-90deg);
+    pointer-events: none;
+    width: 200px;
+    height: 200px;
+}
+.play{
+    position: absolute;
+    width: 80px;
+    cursor: pointer;
+    margin-left: 15px;
+    transition: .3s ease-in-out;
+}
+.pause{
+    position: absolute !important;
+    width: 80px !important;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+    display: none;
+}
+.player-container h3{
+    position: absolute;
+    top: 70%;
+    font-size: 40px;
+    margin-left: 10px;
+    color: white;
+}
+
+.vid-container video{
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    top: 0;
+}
